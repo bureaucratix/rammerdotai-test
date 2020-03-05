@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+// console.log()
 const request = require('request');
 
  const authOptions = {
@@ -5,8 +8,8 @@ const request = require('request');
    url: "https://api.rammer.ai/oauth2/token:generate",
    body: {
        type: "application",
-       appId: "<appId>",
-       appSecret: "<appSecret>"
+       appId: process.env.APPID,
+       appSecret: process.env.APPSECRET
    },
    json: true
  };
